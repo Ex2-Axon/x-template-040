@@ -1,0 +1,361 @@
+# X-Template V.0.0.0-Genesis
+
+> Cyberpunk Glassmorphism starter template — React + TypeScript + Vite
+
+[![Deploy to GitHub Pages](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ex2-Axon/x-template/actions/workflows/deploy.yml)
+[![Bluesky](https://img.shields.io/badge/Bluesky-%40microtronic.bsky.social-0085ff?logo=bluesky&logoColor=white)](https://bsky.app/profile/microtronic.bsky.social)
+
+**Live demo:** https://ex2-axon.github.io/x-template/
+
+![Screenshot](screenshot.png)
+
+---
+
+## Stack
+
+| | |
+|---|---|
+| **Framework** | React 19 + TypeScript |
+| **Build tool** | Vite 8 |
+| **Styling** | CSS (Glassmorphism + Neon) + Tailwind CSS 4 |
+| **Package manager** | pnpm |
+| **Deploy** | GitHub Pages (auto on push) |
+
+---
+
+## Features
+
+- Cyberpunk glassmorphism UI with full animation
+- Neon glow effects — cyan, pink, purple, green
+- Animated grid background + floating particles
+- Glitch text effect on title
+- Scanline CRT overlay
+- Orbit rings on hero image
+- Staggered entrance animations
+- Auto-deploy to GitHub Pages on push
+- Auto-post to Discord, Bluesky, X on push
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+---
+
+## GitHub Actions Workflows
+
+| Workflow | Trigger | Description |
+|---|---|---|
+| `deploy.yml` | push to main | Build & deploy to GitHub Pages |
+| `discord-notify.yml` | push to main | Send release embed to Discord |
+| `bluesky-notify.yml` | push to main | Post release to Bluesky |
+| `x-notify.yml` | push to main | Post release to X (Twitter) |
+
+### Required Secrets
+
+Go to **Settings → Secrets and variables → Actions** and add:
+
+| Secret | Description |
+|---|---|
+| `DISCORD_WEBHOOK_URL` | Discord webhook URL |
+| `BSKY_IDENTIFIER` | Bluesky handle (e.g. `microtronic.bsky.social`) |
+| `BSKY_APP_PASSWORD` | Bluesky app password |
+| `X_API_KEY` | X Consumer Key |
+| `X_API_SECRET` | X Consumer Secret |
+| `X_ACCESS_TOKEN` | X Access Token |
+| `X_ACCESS_TOKEN_SECRET` | X Access Token Secret |
+
+---
+
+## Project Structure
+
+```
+x-template/
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       ├── discord-notify.yml
+│       ├── bluesky-notify.yml
+│       └── x-notify.yml
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## Connect
+
+- Bluesky: [@microtronic.bsky.social](https://bsky.app/profile/microtronic.bsky.social)
+- Discord: [Join server](https://discord.gg/8Zeq8VCU)
+- GitHub: [Ex2-Axon](https://github.com/Ex2-Axon)
+
+## Generation Prompt
+```text
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 40,
+  "date": "2026-05-31",
+  "version": "1.40.0",
+  "project_name": "x-template-040",
+  "theme": {
+    "name": "OBSIDIAN GRID IMPERIUM",
+    "style": "A hyper-stylized fusion of deep, luxurious dark aesthetics with the precision and structural integrity of Swiss Modernism. Features stark geometric layouts, ultra-fine typography, and unexpected bursts of vibrant, high-contrast chroma. The design emphasizes negative space and meticulous alignment, creating an experience that is both sophisticated and visually arresting.",
+    "mood": "Precision, Serene, Opulent, Structured, Enigmatic"
+  },
+  "palette": {
+    "background": "#0A0A0F",
+    "surface": "#1A1A22",
+    "primary": "#00C0FF",
+    "accent": "#FF007B",
+    "text": "#E0E0E0",
+    "muted": "#6A6A75"
+  },
+  "typography": {
+    "heading": "Syne",
+    "body": "Outfit",
+    "size": "fluid-optimized-scale"
+  },
+  "layout": {
+    "structure": "asymmetric-grid with controlled overlap",
+    "density": "spacious",
+    "border_style": "ultra-fine 0.5px solid #333333 with subtle ethereal glow on focus"
+  },
+  "animation": {
+    "level": "high",
+    "style": "Magnetic hover effects on interactive elements, character-by-character text reveals for headings, seamless geometric transitions between sections, and subtle parallax scrolling for depth."
+  },
+  "components": {
+    "hero_text": "ABSOLUTE PRECISION",
+    "subtitle": "Experience the nexus of meticulous design and digital luxury, where every pixel is a testament to structured elegance and vibrant innovation.",
+    "button_label": "ACTIVATE PROTOCOL",
+    "badge_text": "SWISS-GEN V1.0"
+  },
+  "commit_message": "feat: UI Day 40 — Experimental Theme",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Cards",
+    "component": "nanda248_average-goat-70.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\nanda248_average-goat-70.html",
+    "content": "<div class=\"card\">\n  <div class=\"circle small top-left\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n  <div class=\"circle\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n  <div class=\"circle small bottom-right\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n</div>\n<style>\n/* Tags: card, playing card, uno */\n.card {\n  width: 11em;\n  height: 14.8em;\n  position: relative;\n  background: #28282B;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 6px solid #F5F5DC;\n  border-radius: 5px;\n  transition: 0.5s;\n  overflow: hidden;\n}\n\n.card .circle {\n  width: 8em;\n  height: 14em;\n  border-radius: 50%;\n  transform: skew(-25deg);\n  border: 4px solid white;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.card .circle.small {\n  position: absolute;\n  width: 1.5em;\n  height: 3em;\n  border: 1px solid white;\n}\n\n.card .circle.top-left {\n  top: 0.3em;\n  left: 0.6em;\n}\n\n.card .circle.bottom-right {\n  bottom: 0.3em;\n  right: 0.6em;\n}\n\n.card:hover {\n  cursor: pointer;\n  transform: translate(0, -5px);\n}\n\n.card:hover:after, .card:hover:before {\n  visibility: hidden;\n}\n\n.card .circle span:nth-child(1) {\n  background-color: #FF2400;\n  border-top-left-radius: 100%;\n}\n\n.card .circle span:nth-child(2) {\n  background-color: #1F51FF;\n  border-top-right-radius: 100%;\n}\n\n.card .circle span:nth-child(3) {\n  background-color: #FFEA00;\n  border-bottom-left-radius: 100%;\n}\n\n.card .circle span:nth-child(4) {\n  background-color: #50C878;\n  border-bottom-right-radius: 100%;\n}\n\n/* glider animation */\n.card:before {\n  content: '';\n  position: absolute;\n  height: 130%;\n  width: 1em;\n  background-color: aliceblue;\n  opacity: 0.14;\n  animation: glider 1.8s infinite linear;\n  animation-delay: 0.05s;\n}\n\n.card:after {\n  content: '';\n  position: absolute;\n  height: 120%;\n  width: 0.8em;\n  background-color: aliceblue;\n  opacity: 0.1;\n  animation: glider 1.8s infinite linear;\n}\n\n@keyframes glider {\n  0% {\n    transform: rotate(45deg) translate(-12em, 1.2em);\n  }\n\n  100% {\n    transform: rotate(45deg) translate(18em, -2.8em);\n  }\n}\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Cards
+- Component: nanda248_average-goat-70.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Cards\nanda248_average-goat-70.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<div class="card">
+  <div class="circle small top-left">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="circle">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="circle small bottom-right">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<style>
+/* Tags: card, playing card, uno */
+.card {
+  width: 11em;
+  height: 14.8em;
+  position: relative;
+  background: #28282B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #F5F5DC;
+  border-radius: 5px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.card .circle {
+  width: 8em;
+  height: 14em;
+  border-radius: 50%;
+  transform: skew(-25deg);
+  border: 4px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card .circle.small {
+  position: absolute;
+  width: 1.5em;
+  height: 3em;
+  border: 1px solid white;
+}
+
+.card .circle.top-left {
+  top: 0.3em;
+  left: 0.6em;
+}
+
+.card .circle.bottom-right {
+  bottom: 0.3em;
+  right: 0.6em;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translate(0, -5px);
+}
+
+.card:hover:after, .card:hover:before {
+  visibility: hidden;
+}
+
+.card .circle span:nth-child(1) {
+  background-color: #FF2400;
+  border-top-left-radius: 100%;
+}
+
+.card .circle span:nth-child(2) {
+  background-color: #1F51FF;
+  border-top-right-radius: 100%;
+}
+
+.card .circle span:nth-child(3) {
+  background-color: #FFEA00;
+  border-bottom-left-radius: 100%;
+}
+
+.card .circle span:nth-child(4) {
+  background-color: #50C878;
+  border-bottom-right-radius: 100%;
+}
+
+/* glider animation */
+.card:before {
+  content: '';
+  position: absolute;
+  height: 130%;
+  width: 1em;
+  background-color: aliceblue;
+  opacity: 0.14;
+  animation: glider 1.8s infinite linear;
+  animation-delay: 0.05s;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  height: 120%;
+  width: 0.8em;
+  background-color: aliceblue;
+  opacity: 0.1;
+  animation: glider 1.8s infinite linear;
+}
+
+@keyframes glider {
+  0% {
+    transform: rotate(45deg) translate(-12em, 1.2em);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(18em, -2.8em);
+  }
+}
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes - TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: Precision, Serene, Opulent, Structured, Enigmatic
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive - Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44x44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic Co., Ltd. All rights reserved. Credit By Axon.`
+- Legal: [Privacy Policy](https://microtronic-thailand.github.io/privacy-policy/?lang=en)
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `ABSOLUTE PRECISION - OBSIDIAN GRID IMPERIUM | Microtronic`
+- Add `<meta name="description">` with the subtitle: `Experience the nexus of meticulous design and digital luxury, where every pixel is a testament to structured elegance and vibrant innovation.`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections - no skipping levels
+
+### 4. Extreme Effects & Animations
+- Add extremely impressive effects and animations (multiply by 10) to make it look stunning!
+- Focus on hover effects, background animations, micro-interactions, and parallax.
+
+## After saving all files
+1. Update `version` in `package.json` to `1.40.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild
+
+```

@@ -1,0 +1,47 @@
+{
+  "day": 40,
+  "date": "2026-05-31",
+  "version": "1.40.0",
+  "project_name": "x-template-040",
+  "theme": {
+    "name": "OBSIDIAN GRID IMPERIUM",
+    "style": "A hyper-stylized fusion of deep, luxurious dark aesthetics with the precision and structural integrity of Swiss Modernism. Features stark geometric layouts, ultra-fine typography, and unexpected bursts of vibrant, high-contrast chroma. The design emphasizes negative space and meticulous alignment, creating an experience that is both sophisticated and visually arresting.",
+    "mood": "Precision, Serene, Opulent, Structured, Enigmatic"
+  },
+  "palette": {
+    "background": "#0A0A0F",
+    "surface": "#1A1A22",
+    "primary": "#00C0FF",
+    "accent": "#FF007B",
+    "text": "#E0E0E0",
+    "muted": "#6A6A75"
+  },
+  "typography": {
+    "heading": "Syne",
+    "body": "Outfit",
+    "size": "fluid-optimized-scale"
+  },
+  "layout": {
+    "structure": "asymmetric-grid with controlled overlap",
+    "density": "spacious",
+    "border_style": "ultra-fine 0.5px solid #333333 with subtle ethereal glow on focus"
+  },
+  "animation": {
+    "level": "high",
+    "style": "Magnetic hover effects on interactive elements, character-by-character text reveals for headings, seamless geometric transitions between sections, and subtle parallax scrolling for depth."
+  },
+  "components": {
+    "hero_text": "ABSOLUTE PRECISION",
+    "subtitle": "Experience the nexus of meticulous design and digital luxury, where every pixel is a testament to structured elegance and vibrant innovation.",
+    "button_label": "ACTIVATE PROTOCOL",
+    "badge_text": "SWISS-GEN V1.0"
+  },
+  "commit_message": "feat: UI Day 40 — Experimental Theme",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Cards",
+    "component": "nanda248_average-goat-70.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\nanda248_average-goat-70.html",
+    "content": "<div class=\"card\">\n  <div class=\"circle small top-left\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n  <div class=\"circle\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n  <div class=\"circle small bottom-right\">\n    <span></span>\n    <span></span>\n    <span></span>\n    <span></span>\n  </div>\n</div>\n<style>\n/* Tags: card, playing card, uno */\n.card {\n  width: 11em;\n  height: 14.8em;\n  position: relative;\n  background: #28282B;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 6px solid #F5F5DC;\n  border-radius: 5px;\n  transition: 0.5s;\n  overflow: hidden;\n}\n\n.card .circle {\n  width: 8em;\n  height: 14em;\n  border-radius: 50%;\n  transform: skew(-25deg);\n  border: 4px solid white;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n}\n\n.card .circle.small {\n  position: absolute;\n  width: 1.5em;\n  height: 3em;\n  border: 1px solid white;\n}\n\n.card .circle.top-left {\n  top: 0.3em;\n  left: 0.6em;\n}\n\n.card .circle.bottom-right {\n  bottom: 0.3em;\n  right: 0.6em;\n}\n\n.card:hover {\n  cursor: pointer;\n  transform: translate(0, -5px);\n}\n\n.card:hover:after, .card:hover:before {\n  visibility: hidden;\n}\n\n.card .circle span:nth-child(1) {\n  background-color: #FF2400;\n  border-top-left-radius: 100%;\n}\n\n.card .circle span:nth-child(2) {\n  background-color: #1F51FF;\n  border-top-right-radius: 100%;\n}\n\n.card .circle span:nth-child(3) {\n  background-color: #FFEA00;\n  border-bottom-left-radius: 100%;\n}\n\n.card .circle span:nth-child(4) {\n  background-color: #50C878;\n  border-bottom-right-radius: 100%;\n}\n\n/* glider animation */\n.card:before {\n  content: '';\n  position: absolute;\n  height: 130%;\n  width: 1em;\n  background-color: aliceblue;\n  opacity: 0.14;\n  animation: glider 1.8s infinite linear;\n  animation-delay: 0.05s;\n}\n\n.card:after {\n  content: '';\n  position: absolute;\n  height: 120%;\n  width: 0.8em;\n  background-color: aliceblue;\n  opacity: 0.1;\n  animation: glider 1.8s infinite linear;\n}\n\n@keyframes glider {\n  0% {\n    transform: rotate(45deg) translate(-12em, 1.2em);\n  }\n\n  100% {\n    transform: rotate(45deg) translate(18em, -2.8em);\n  }\n}\n</style>"
+  }
+}
